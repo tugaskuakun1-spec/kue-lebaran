@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapur Kue Lebaran - Premium</title>
+    <style>
+        /* --- CSS STANDAR & RESET --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f2;
+            color: #333;
+        }
+
+        /* --- HERO SECTION (BACKGROUND GELAP + LOGO TENGAH) --- */
+        .hero {
+            position: relative;
+            height: 80vh;
+            /* Ganti URL di bawah dengan foto kue jagoanmu */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .logo-bulat {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #e67e22;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin: 0; }
+        .hero p { font-size: 1.2rem; }
+
+        /* --- CONTAINER UTAMA --- */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* --- SECTION KATEGORI --- */
+        section {
+            padding: 50px 0;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        .kering { background-color: #fff5e6; padding: 40px 20px; }
+        .basah { background-color: #f0f8ff; padding: 40px 20px; }
+        
+        h2 { text-align: center; color: #d35400; margin-bottom: 30px; }
+
+        /* --- CARD HORIZONTAL (GAMBAR SAMPING TEKS) --- */
+        .card-horizontal {
+            display: flex;
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card-horizontal:hover { transform: translateY(-5px); }
+
+        .card-horizontal img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .harga { font-weight: bold; color: #e67e22; font-size: 1.2rem; }
+
+        /* --- TOMBOL SOSMED --- */
+        .social-buttons { text-align: center; margin-top: 50px; }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-wa { background-color: #25D366; }
+        .btn-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .btn:hover { opacity: 0.8; transform: scale(1.05); }
+
+        /* --- MEDIA QUERY (BIAR JALAN DI HP) --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            
+            .card-horizontal {
+                flex-direction: column; /* Gambar di atas, teks di bawah kalau di HP */
+            }
+
+            .card-horizontal img {
+                width: 100%;
+                height: 200px;
+            }
+
+            .container { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <img src="https://via.placeholder.com/150" class="logo-bulat" alt="Logo Mama">
+        <h1>Dapur Kue Mama</h1>
+        <p>Manisnya Silaturahmi dengan Kue Premium</p>
+    </div>
+
+    <div class="container">
+        
+        <section class="kering">
+            <h2>🍪 Koleksi Kue Kering</h2>
+            
+            <div class="card-horizontal">
+                <img src="https://via.placeholder.com/200" alt="Nastar">
+                <div class="card-content">
+                    <h3>Nastar Keju Lumer</h3>
+                    <p>Dibuat dengan butter Wijsman pilihan dan selai nanas asli.</p>
+                    <p class="harga">Rp 95.000</p>
+                </div>
+            </div>
+
+            <div class="card-horizontal">
+                <img src="https://via.placeholder.com/200" alt="Kastengel">
+                <div class="card-content">
+                    <h3>Kastengel Edam</h3>
+                    <p>Taburan keju Edam yang melimpah dan sangat renyah.</p>
+                    <p class="harga">Rp 110.000</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="basah">
+            <h2>🍰 Koleksi Kue Basah</h2>
+            
+            <div class="card-horizontal">
+                <img src="https://via.placeholder.com/200" alt="Lapis Legit">
+                <div class="card-content">
+                    <h3>Lapis Legit Ori</h3>
+                    <p>Tekstur lembut dengan rempah khas yang harum.</p>
+                    <p class="harga">Rp 250.000</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="social-buttons">
+            <h2>Pesan Sekarang:</h2>
+            <a href="https://wa.me/628123456789" class="btn btn-wa">Order via WhatsApp</a>
+            <a href="https://instagram.com/username" class="btn btn-ig">Follow Instagram</a>
+        </div>
+
+    </div>
+
+    <footer style="text-align: center; padding: 20px; color: #888;">
+        &copy; 2024 Dapur Kue Mama - Dibuat dengan ❤️
+    </footer>
+
+</body>
+</html>
